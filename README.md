@@ -34,6 +34,7 @@ The analysis includes **summary statistics and visualization** of key variables.
 ## How to Generate the Final Report
 
 First clone this repository to your local machine.
+Set up your working directory to point to the repository folder.
 
 1.**Install Required Packages**: If you haven’t installed the required packages, run the following command in R:
 
