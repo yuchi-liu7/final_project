@@ -1,7 +1,6 @@
 final_project.html: final_project.Rmd code/render_report.R data/heart.csv table_analysis plot_analysis
 	Rscript code/render_report.R
 	
-	
 output/table1.rds: code/code_table1.R data/heart.csv
 	Rscript code/code_table1.R
 output/table2.rds: code/code_table2.R data/heart.csv
@@ -24,5 +23,11 @@ plot_analysis: output/plot1.png output/plot2.png
 .PHONY: clean
 clean:
 	rm -f output/*.rds && rm -f output/*.png && rm -f *.html
+	
+
+.PHONY: install
+install:	
+	Rscript -e "renv::restore(prompt=FALSE)"
+
 	
 	

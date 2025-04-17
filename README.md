@@ -37,6 +37,29 @@ First clone this repository to your local machine.
 
 Set up your working directory to point to the repository folder.
 
+#### Package Environment Setup
+This project uses `renv` to ensure package reproducibility.
+
+Before building the project, confirm that you has the renv package installed, run the following code in Console:
+
+``` r
+"renv" %in% row.names(installed.packages())
+``` 
+
+If the above command returns `FALSE`, install the renv package in Console.
+
+```r
+install.packages("renv")
+```
+
+To install the correct versions of all required packages as specified in the renv.lock file, do it via command line (bash)
+
+```r
+make install
+```
+
+This will ensure all required packages are installed with the correct versions for full reproducibility.
+
 1.**Install Required Packages**: If you haven’t installed the required packages, run the following command in R:
 
 ``` r
