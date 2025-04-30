@@ -105,3 +105,50 @@ Plot 2: Boxplot comparing age distributions for individuals with and without hea
 
 The analysis reveals key insights into the relationships between heart disease and various health indicators.
 By following the steps outlined above, you can reproduce the analysis, generate the final report, and gain a deeper understanding of the dataset.
+
+
+##  Docker Image
+This project includes a Dockerfile that builds an image to fully reproduce the analysis in a containerized environment using R, renv, and Make.
+
+### Pull the image from DockerHub
+1.Using the Pre-Built DockerHub Image
+You can pull the image directly from DockerHub:
+
+```bash
+docker pull yuchi7/project_image
+```
+**DockerHub link**:: https://hub.docker.com/repository/docker/yuchi7/project_image/general
+
+To run the full pipeline inside a container:
+
+```bash
+make report/final_project.html
+```
+This will:
+
+(1)pull the image from Dockerhub
+
+(2) Mount your local `report/` directory into the container
+
+(3) Execute the full analysis pipeline (render_report.R)
+
+(4) Output the final report `final_project.html` into your local` report/ `folder
+
+
+2. Building the Image Locally 
+If you want to rebuild the image locally, and you have Docker installed:
+
+```bash
+docker build -t project_image .
+```
+Or simply use the Makefile:
+
+```bash
+make project_image
+```
+
+
+
+
+
+

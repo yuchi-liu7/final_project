@@ -5,6 +5,9 @@ here::i_am(
 
 data <- read.csv(here::here("data", "heart.csv"), header = TRUE)
 library(knitr)
+library(labelled)
+library(gtsummary)
+library(kableExtra)
 
 var_label(data) <- list(
   Age = "age",
