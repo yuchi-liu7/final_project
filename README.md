@@ -122,18 +122,8 @@ docker pull yuchi7/project_image
 To run the full pipeline inside a container:
 
 ```bash
-make report/final_project.html
+make report
 ```
-This will:
-
-(1)pull the image from Dockerhub
-
-(2) Mount your local `report/` directory into the container
-
-(3) Execute the full analysis pipeline (render_report.R)
-
-(4) Output the final report `final_project.html` into your local` report/ `folder
-
 
 2. Building the Image Locally 
 If you want to rebuild the image locally, and you have Docker installed:
@@ -146,7 +136,11 @@ Or simply use the Makefile:
 ```bash
 make project_image
 ```
+Then bulid the final report:
 
+```bash
+make report/final_project.html
+```
 
 
 

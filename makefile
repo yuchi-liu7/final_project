@@ -43,8 +43,9 @@ report/final_project.html: project_image
 	docker run -v "$$(pwd)/report":/home/rstudio/project/report project_image
 
 
-
-
+.PHONY: report
+report: 
+	docker run -v "$$(pwd)/report":/home/rstudio/project/report yuchi7/project_image
 
 
 
