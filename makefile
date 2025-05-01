@@ -22,7 +22,7 @@ plot_analysis: output/plot1.png output/plot2.png
 
 .PHONY: clean
 clean:
-	rm -f output/*.rds && rm -f output/*.png && rm -f *.html
+	rm -f output/*.rds && rm -f output/*.png && rm -f *.html && rm -f report/*.html
 	
   
 .PHONY: install
@@ -39,7 +39,7 @@ project_image: Dockerfile $(PROJECTFILES) $(RENVFILES)
 	docker build -t project_image .
 	touch $@
 	
-report/final_project.html: project_image
+report/final_project.html:project_image
 	docker run -v "$$(pwd)/report":/home/rstudio/project/report project_image
 
 

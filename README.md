@@ -136,6 +136,7 @@ Or simply use the Makefile:
 ```bash
 make project_image
 ```
+
 Then bulid the final report:
 
 ```bash
