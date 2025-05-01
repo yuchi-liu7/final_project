@@ -117,7 +117,7 @@ You can pull the image directly from DockerHub:
 ```bash
 docker pull yuchi7/project_image
 ```
-**DockerHub link**:: https://hub.docker.com/repository/docker/yuchi7/project_image/general
+**DockerHub link**: https://hub.docker.com/repository/docker/yuchi7/project_image/general
 
 To run the full pipeline inside a container:
 
